@@ -1,9 +1,9 @@
 package org.example;
 
 public class ScientificCalculator {
-    //public double add(double a, double b) {
-        //return a + b;
-    //}
+    public double add(double a, double b) {
+        return a + b;
+    }
 
     public double subtract(double a, double b) {
         return a - b;
