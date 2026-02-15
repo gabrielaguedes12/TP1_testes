@@ -9,7 +9,7 @@ public class ScientificCalculatorTest {
         //setup
         ScientificCalculator calculator = new ScientificCalculator();
 
-        //execution
+        //execu
         double result = calculator.add(2,3);
 
         //assertion
