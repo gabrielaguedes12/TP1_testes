@@ -1,6 +1,7 @@
 package org.example;
 
 public class ScientificCalculator {
+
     public double add(double a, double b) {
         return a + b;
     }
@@ -9,10 +10,34 @@ public class ScientificCalculator {
         return a - b;
     }
 
-    public double squareRoot(double number) {
-    if(number < 0){
-        throw new IllegalArgumentException("Sem numero negativo aqui bb");
+    public double multiply(double a, double b) {
+        return a * b;
     }
-    return Math.sqrt(number);
+
+    public double divide(double a, double b) {
+        if (b == 0) throw new IllegalArgumentException("Division by zero");
+        return a / b;
+    }
+
+    public double power(double base, double exponent) {
+        return Math.pow(base, exponent);
+    }
+
+    public double squareRoot(double a) {
+        if (a < 0) throw new IllegalArgumentException("Negative number");
+        return Math.sqrt(a);
+    }
+
+    public double log(double a) {
+        if (a <= 0) throw new IllegalArgumentException("Log of non-positive number");
+        return Math.log(a);
+    }
+
+    public double sin(double degrees) {
+        return Math.sin(Math.toRadians(degrees));
+    }
+
+    public double cos(double degrees) {
+        return Math.cos(Math.toRadians(degrees));
     }
 }
