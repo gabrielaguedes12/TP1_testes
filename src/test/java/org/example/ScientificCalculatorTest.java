@@ -13,9 +13,7 @@ public class ScientificCalculatorTest {
     @BeforeEach
     void setUp() {
         calculator = new ScientificCalculator();
-
     }
-
 
     // Testes de Operações Aritméticas
     @Test
@@ -42,7 +40,6 @@ public class ScientificCalculatorTest {
         assertEquals(4, result);
     }
 
-
     // Testes de Potência e Raiz
     @Test
     void shouldReturnCorrectPowerWhenBaseAndExponentAreValid() {
@@ -62,14 +59,12 @@ public class ScientificCalculatorTest {
                 () -> calculator.squareRoot(-6));
     }
 
-
     // Testes de Cenários de Exceção
     @Test
     void shouldThrowExceptionWhenDividingByZero() {
         assertThrows(IllegalArgumentException.class,
                 () -> calculator.divide(10, 0));
     }
-
 
     // Testes de Funções Logarítmicas e Trigonométricas
     @Test
