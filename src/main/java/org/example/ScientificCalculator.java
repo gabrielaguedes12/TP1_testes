@@ -8,4 +8,11 @@ public class ScientificCalculator {
     public double subtract(double a, double b) {
         return a - b;
     }
+
+    public double squareRoot(double number) {
+    if(number < 0){
+        throw new IllegalArgumentException("Sem numero negativo aqui bb");
+    }
+    return Math.sqrt(number);
+    }
 }

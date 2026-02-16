@@ -10,7 +10,7 @@ public class ScientificCalculatorTest {
     @BeforeEach
     void setUp() {
         calculator = new ScientificCalculator();
-        System.out.println("Teste Feito!");
+        System.out.println("Teste para cada nova execução!");
     }
 
     @Test
@@ -20,7 +20,6 @@ public class ScientificCalculatorTest {
 
         //assertion-verificação se o resultado é o esperado
         assertEquals(5, result);
-
         // teardown
     }
 @Test
@@ -29,5 +28,18 @@ public class ScientificCalculatorTest {
         double result = calculator.subtract(2,1);
         /*assertion-verificação se o resultado é o esperado*/
         assertEquals(1, result);
+    }
+
+    @Test
+    void testSquareRootPositive() {
+        double result = calculator.squareRoot(9);
+        assertEquals(3.0, result);
+    }
+
+    @Test
+    void testSquareRootNegative() {
+        assertThrows(IllegalArgumentException.class, ()->{
+            calculator.squareRoot(-6);
+        });
     }
 }
